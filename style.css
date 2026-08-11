@@ -292,3 +292,42 @@
   .real-signup input{border-right:1px solid #555}
   .real-signup button{margin-top:8px}
 }
+
+
+/* v10 signup fix: prevent Kit from rebuilding the form and keep one clean box */
+.real-signup{
+  display:flex !important;
+  width:100% !important;
+  margin:0 !important;
+  border:1px solid #555 !important;
+}
+.real-signup input{
+  flex:1 1 auto !important;
+  min-width:0 !important;
+  height:42px !important;
+  margin:0 !important;
+  padding:13px 15px !important;
+  border:0 !important;
+  border-radius:0 !important;
+  background:transparent !important;
+  color:#f4f1ec !important;
+}
+.real-signup button{
+  flex:0 0 auto !important;
+  height:42px !important;
+  margin:0 !important;
+  padding:0 17px !important;
+  border:0 !important;
+  border-left:1px solid #555 !important;
+  border-radius:0 !important;
+  background:transparent !important;
+  color:#f4f1ec !important;
+}
+@media(max-width:440px){
+  .real-signup{flex-direction:column !important}
+  .real-signup button{
+    margin:0 !important;
+    border-left:0 !important;
+    border-top:1px solid #555 !important;
+  }
+}
