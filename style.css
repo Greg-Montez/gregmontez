@@ -432,3 +432,62 @@ body::after{
     background-position:center top;
   }
 }
+
+
+/* v17 — Visual cards pop/expand on hover */
+.visual-grid{
+  overflow:visible;
+}
+
+.visual-card{
+  position:relative;
+  z-index:1;
+  transform:translateY(0) scale(1);
+  transform-origin:center;
+  transition:
+    transform .32s cubic-bezier(.22,1,.36,1),
+    border-color .32s ease,
+    background-color .32s ease,
+    box-shadow .32s ease !important;
+}
+
+.visual-card:hover{
+  z-index:10;
+  transform:translateY(-10px) scale(1.055);
+  border-color:rgba(244,241,236,.48);
+  background:rgba(18,31,52,.78);
+  box-shadow:0 18px 45px rgba(0,0,0,.30);
+}
+
+.visual-card span,
+.visual-card small{
+  transition:transform .32s cubic-bezier(.22,1,.36,1), color .32s ease;
+}
+
+.visual-card:hover span{
+  transform:translateY(-3px);
+  color:#f4f1ec;
+}
+
+.visual-card:hover small{
+  transform:translateY(-2px);
+  color:#9b9b9b;
+}
+
+@media (hover:none){
+  .visual-card:hover{
+    transform:none;
+    box-shadow:none;
+  }
+}
+
+@media (prefers-reduced-motion:reduce){
+  .visual-card,
+  .visual-card span,
+  .visual-card small{
+    transition:none !important;
+  }
+  .visual-card:hover{
+    transform:none !important;
+  }
+}
