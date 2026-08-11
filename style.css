@@ -559,3 +559,12 @@ body::after{
   transform:translateY(-3px) !important;
   color:#b7b7b7 !important;
 }
+
+/* v20 moving your great banner */
+.album-marquee{width:100%;overflow:hidden;border-bottom:1px solid rgba(244,241,236,.18);background:rgba(4,13,29,.74);backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px);padding:9px 0;position:relative;z-index:100}
+.album-marquee-track{display:flex;width:max-content;gap:54px;white-space:nowrap;animation:albumTickerRight 22s linear infinite;will-change:transform}
+.album-marquee-track span{color:rgba(244,241,236,.72);font-size:9px;font-weight:400;letter-spacing:3px;text-transform:uppercase}
+.album-marquee-track em{font-family:"Caveat",cursive;font-style:normal;font-size:17px;letter-spacing:0;text-transform:none;color:#f4f1ec;margin-right:5px}
+.album-marquee:hover .album-marquee-track{animation-play-state:paused}
+@keyframes albumTickerRight{from{transform:translateX(-33.333%)}to{transform:translateX(0)}}
+@media(prefers-reduced-motion:reduce){.album-marquee-track{animation:none}}
