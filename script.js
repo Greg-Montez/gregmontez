@@ -17,3 +17,20 @@ document.querySelectorAll(".scroll-reveal, .stagger-reveal, .track-reveal").forE
 
 // Cinematic first-load hero entrance
 window.addEventListener("DOMContentLoaded",()=>{requestAnimationFrame(()=>{requestAnimationFrame(()=>document.body.classList.add("hero-loaded"))})});
+
+
+// v19 — robust hover/pointer pop for Visual cards
+document.querySelectorAll(".visual-card").forEach(card => {
+  card.addEventListener("pointerenter", () => {
+    card.classList.add("visual-pop");
+  });
+  card.addEventListener("pointerleave", () => {
+    card.classList.remove("visual-pop");
+  });
+  card.addEventListener("mouseenter", () => {
+    card.classList.add("visual-pop");
+  });
+  card.addEventListener("mouseleave", () => {
+    card.classList.remove("visual-pop");
+  });
+});

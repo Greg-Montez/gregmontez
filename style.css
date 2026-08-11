@@ -539,3 +539,23 @@ body::after{
     box-shadow:none !important;
   }
 }
+
+
+/* v19 — force visual-card pop with JS class */
+.visual-card.visual-pop{
+  z-index:50 !important;
+  transform:translateY(-14px) scale(1.09) !important;
+  border-color:rgba(244,241,236,.75) !important;
+  background:rgba(26,48,80,.94) !important;
+  box-shadow:0 28px 65px rgba(0,0,0,.48) !important;
+}
+
+.visual-card.visual-pop span{
+  transform:translateY(-5px) scale(1.04) !important;
+  color:#fff !important;
+}
+
+.visual-card.visual-pop small{
+  transform:translateY(-3px) !important;
+  color:#b7b7b7 !important;
+}
