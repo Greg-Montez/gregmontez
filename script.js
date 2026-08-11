@@ -14,3 +14,6 @@ const revealObserver = new IntersectionObserver((entries, observer) => {
 document.querySelectorAll(".scroll-reveal, .stagger-reveal").forEach(el => {
   revealObserver.observe(el);
 });
+
+// Cinematic first-load hero entrance
+window.addEventListener("DOMContentLoaded",()=>{requestAnimationFrame(()=>{requestAnimationFrame(()=>document.body.classList.add("hero-loaded"))})});
