@@ -568,3 +568,20 @@ body::after{
 .album-marquee:hover .album-marquee-track{animation-play-state:paused}
 @keyframes albumTickerRight{from{transform:translateX(-33.333%)}to{transform:translateX(0)}}
 @media(prefers-reduced-motion:reduce){.album-marquee-track{animation:none}}
+
+
+/* v21 — faster, larger album ticker */
+.album-marquee{
+  padding:12px 0 !important;
+}
+.album-marquee-track{
+  animation-duration:14s !important;
+  gap:62px !important;
+}
+.album-marquee-track span{
+  font-size:12px !important;
+  letter-spacing:3.5px !important;
+}
+.album-marquee-track em{
+  font-size:23px !important;
+}
