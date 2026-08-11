@@ -491,3 +491,51 @@ body::after{
     transform:none !important;
   }
 }
+
+
+/* v18 — FIX visual hover conflict with scroll-reveal transform */
+.visual-card.stagger-reveal{
+  transform:translateY(22px) scale(1) !important;
+}
+
+.visual-card.stagger-reveal.is-visible{
+  transform:translateY(0) scale(1) !important;
+}
+
+/* This must come AFTER the scroll animation rules */
+.visual-card.stagger-reveal.is-visible:hover{
+  z-index:20 !important;
+  transform:translateY(-12px) scale(1.07) !important;
+  border-color:rgba(244,241,236,.65) !important;
+  background:rgba(23,42,70,.88) !important;
+  box-shadow:0 24px 55px rgba(0,0,0,.42) !important;
+}
+
+.visual-card.stagger-reveal.is-visible:hover span{
+  transform:translateY(-4px) scale(1.03) !important;
+  color:#fff !important;
+}
+
+.visual-card.stagger-reveal.is-visible:hover small{
+  transform:translateY(-3px) !important;
+  color:#aaa !important;
+}
+
+/* Make the effect unmistakable */
+.visual-card{
+  cursor:pointer;
+  overflow:visible !important;
+}
+
+.visual-grid{
+  overflow:visible !important;
+  position:relative;
+  z-index:2;
+}
+
+@media (hover:none){
+  .visual-card.stagger-reveal.is-visible:hover{
+    transform:translateY(0) scale(1) !important;
+    box-shadow:none !important;
+  }
+}
