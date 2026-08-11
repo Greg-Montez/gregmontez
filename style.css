@@ -386,3 +386,25 @@ body.hero-loaded .hero-enter-title{opacity:1;transform:translateY(0);filter:blur
   }
   .revealed-track.is-visible .revealed-track-title{animation:none!important}
 }
+
+
+/* v13 — user's blue textured background, darkened */
+html{
+  background:#02060d;
+}
+body{
+  background-color:#02060d !important;
+  background-image:
+    linear-gradient(rgba(0,4,12,.62), rgba(0,4,12,.62)),
+    url("assets/blue-texture-bg.jpg") !important;
+  background-size:cover !important;
+  background-position:center top !important;
+  background-repeat:no-repeat !important;
+  background-attachment:fixed !important;
+}
+@media(max-width:700px){
+  body{
+    background-attachment:scroll !important;
+    background-size:auto 100vh !important;
+  }
+}
