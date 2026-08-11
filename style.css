@@ -234,3 +234,61 @@
     margin-top:8px !important;
   }
 }
+
+/* Clean custom Kit signup — same look as the original site form */
+.kit-signup{
+  width:min(420px,100%);
+  margin:28px auto 0;
+  text-align:center;
+}
+.real-signup{
+  display:flex;
+  width:100%;
+  margin:0;
+}
+.real-signup input{
+  flex:1;
+  min-width:0;
+  height:42px;
+  padding:13px 15px;
+  border:1px solid #555;
+  border-right:0;
+  border-radius:0;
+  outline:none;
+  background:transparent;
+  color:#f4f1ec;
+  font-family:"Inter",Arial,sans-serif;
+  font-size:10px;
+  letter-spacing:1px;
+  box-shadow:none;
+}
+.real-signup input::placeholder{color:#666}
+.real-signup button{
+  height:42px;
+  padding:0 17px;
+  border:1px solid #555;
+  border-radius:0;
+  background:transparent;
+  color:#f4f1ec;
+  font-family:"Inter",Arial,sans-serif;
+  font-size:9px;
+  font-weight:400;
+  letter-spacing:2px;
+  text-transform:uppercase;
+  cursor:pointer;
+}
+.real-signup button:hover{
+  background:#f4f1ec;
+  color:#090909;
+}
+.signup-note{
+  margin:12px 0 0 !important;
+  color:#666 !important;
+  font-size:8px !important;
+  letter-spacing:1px;
+}
+@media(max-width:440px){
+  .real-signup{flex-direction:column}
+  .real-signup input{border-right:1px solid #555}
+  .real-signup button{margin-top:8px}
+}
