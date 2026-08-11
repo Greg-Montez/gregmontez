@@ -137,3 +137,100 @@
 .socials a:hover::after{transform:scaleX(1)}
 
 .kit-signup{width:min(520px,100%);margin:28px auto 0;text-align:left}
+
+
+/* Kit form — styled to match the original Join the World signup */
+.kit-signup{
+  width:min(420px,100%);
+  margin:28px auto 0;
+  text-align:left;
+}
+
+/* Kit commonly injects these form classes */
+.kit-signup .formkit-form{
+  margin:0 !important;
+  padding:0 !important;
+  max-width:none !important;
+  background:transparent !important;
+  border:0 !important;
+  box-shadow:none !important;
+  font-family:"Inter",Arial,sans-serif !important;
+}
+.kit-signup .formkit-fields{
+  display:flex !important;
+  align-items:stretch !important;
+  margin:0 !important;
+  padding:0 !important;
+}
+.kit-signup .formkit-field{
+  flex:1 1 auto !important;
+  margin:0 !important;
+}
+.kit-signup .formkit-input{
+  width:100% !important;
+  height:42px !important;
+  margin:0 !important;
+  padding:13px 15px !important;
+  border:1px solid #555 !important;
+  border-right:0 !important;
+  border-radius:0 !important;
+  outline:none !important;
+  background:transparent !important;
+  color:#f4f1ec !important;
+  font-family:"Inter",Arial,sans-serif !important;
+  font-size:10px !important;
+  letter-spacing:1px !important;
+  box-shadow:none !important;
+}
+.kit-signup .formkit-input::placeholder{
+  color:#666 !important;
+}
+.kit-signup .formkit-submit{
+  height:42px !important;
+  margin:0 !important;
+  padding:0 17px !important;
+  border:1px solid #555 !important;
+  border-radius:0 !important;
+  background:transparent !important;
+  color:#f4f1ec !important;
+  font-family:"Inter",Arial,sans-serif !important;
+  font-size:9px !important;
+  font-weight:400 !important;
+  letter-spacing:2px !important;
+  text-transform:uppercase !important;
+  box-shadow:none !important;
+  cursor:pointer !important;
+}
+.kit-signup .formkit-submit:hover{
+  background:#f4f1ec !important;
+  color:#090909 !important;
+}
+.kit-signup .formkit-submit > span{
+  padding:0 !important;
+  background:transparent !important;
+}
+.kit-signup .formkit-alert{
+  margin-top:12px !important;
+  color:#8d8d8d !important;
+  font-size:9px !important;
+  letter-spacing:1px !important;
+  background:transparent !important;
+  border:0 !important;
+}
+.kit-signup .formkit-powered-by-convertkit-container,
+.kit-signup .formkit-powered-by-convertkit{
+  opacity:.35 !important;
+  font-size:8px !important;
+}
+
+@media(max-width:440px){
+  .kit-signup .formkit-fields{
+    flex-direction:column !important;
+  }
+  .kit-signup .formkit-input{
+    border-right:1px solid #555 !important;
+  }
+  .kit-signup .formkit-submit{
+    margin-top:8px !important;
+  }
+}
