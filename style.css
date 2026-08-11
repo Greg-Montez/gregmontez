@@ -84,3 +84,56 @@
 }
 
 @media(max-width:700px){.menu-toggle{display:block}.nav-links{position:absolute;top:62px;left:6%;right:6%;display:none;flex-direction:column;background:#0b0b0b}.nav-links.open{display:flex}.nav-links a{padding:14px 18px}.release-grid{grid-template-columns:1fr}.album-grid{grid-template-columns:1fr;gap:45px}.visual-grid{grid-template-columns:1fr 1fr}.section{padding:90px 6%}.about-copy{font-size:14px}.footer{flex-direction:column;gap:20px}}@media(max-width:440px){.visual-grid{grid-template-columns:1fr}.signup{flex-direction:column}.signup input{border-right:1px solid #555}.signup button{margin-top:8px}}
+
+/* Revealed album track */
+.revealed-track{
+  grid-template-columns:44px 1fr auto !important;
+}
+.revealed-track-title{
+  font-family:"Caveat",cursive;
+  font-size:24px;
+  font-weight:500;
+  line-height:1;
+  color:#f4f1ec;
+}
+.track-status{
+  color:#666;
+  font-size:8px;
+  letter-spacing:2px;
+  text-transform:uppercase;
+}
+
+/* Scroll animations */
+.scroll-reveal,
+.stagger-reveal{
+  opacity:0;
+  transform:translateY(22px);
+  transition:opacity .75s ease, transform .75s ease;
+}
+.scroll-reveal.is-visible,
+.stagger-reveal.is-visible{
+  opacity:1;
+  transform:translateY(0);
+}
+.visual-card.stagger-reveal:nth-child(2){transition-delay:.08s}
+.visual-card.stagger-reveal:nth-child(3){transition-delay:.16s}
+
+/* Small polish for active social/footer links */
+.socials a{
+  position:relative;
+}
+.socials a::after{
+  content:"";
+  position:absolute;
+  left:0;
+  bottom:-5px;
+  width:100%;
+  height:1px;
+  background:currentColor;
+  transform:scaleX(0);
+  transform-origin:left;
+  transition:transform .2s ease;
+}
+.socials a:hover::after{transform:scaleX(1)}
+
+.kit-signup{width:min(520px,100%);margin:28px auto 0;text-align:left}
