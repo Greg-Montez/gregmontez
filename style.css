@@ -596,3 +596,20 @@ body::after{
   text-transform:none !important;
   max-width:520px;
 }
+
+
+/* v24 — centered, refined newsletter heading */
+.signup-heading{
+  width:100% !important;
+  max-width:620px !important;
+  margin-left:auto !important;
+  margin-right:auto !important;
+  text-align:center !important;
+  font-family:"Caveat", cursive !important;
+  font-size:clamp(30px,4vw,46px) !important;
+  line-height:1.08 !important;
+  letter-spacing:0 !important;
+  font-weight:400 !important;
+  text-transform:none !important;
+  color:#f4f1ec !important;
+}
